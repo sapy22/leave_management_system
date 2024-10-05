@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"e4d2b2d69cb88bbb","type":"group","x":-200,"y":-180,"width":520,"height":360,"label":"Update"},
+		{"id":"d4166c2474240053","type":"group","x":-676,"y":-500,"width":620,"height":262,"label":"Create"},
+		{"id":"73e8647ceec3d423","type":"group","x":-920,"y":-180,"width":271,"height":278,"label":"Cancel"},
+		{"id":"1cf691c6a6ccf16f","type":"text","text":"SickLeave","x":-469,"y":-480,"width":149,"height":60},
+		{"id":"fdccb2a1b045ef42","type":"text","text":"leave balance\nstart date and end date\nofficer","x":-656,"y":-381,"width":237,"height":123},
+		{"id":"a992d7602843eed1","type":"text","text":"start date and end date\nofficer","x":-320,"y":-379,"width":244,"height":60},
+		{"id":"54c2714d38229173","type":"text","text":"Pending Leave","x":-880,"y":-150,"width":199,"height":60},
+		{"id":"de8db9bd53a5ea68","type":"text","text":"canceled","x":-844,"y":0,"width":126,"height":60},
+		{"id":"21dc9ab0c852b812","type":"text","text":"Approved Leave","x":-27,"y":-160,"width":196,"height":60},
+		{"id":"d21969ec1219b1b8","type":"text","text":"Active","x":12,"y":-40,"width":119,"height":60},
+		{"id":"435b0c461d35fcb1","type":"text","text":"end date","x":131,"y":58,"width":140,"height":60},
+		{"id":"8611d4f14716c451","type":"text","text":"start and end date","x":-158,"y":58,"width":211,"height":82}
+	],
+	"edges":[
+		{"id":"b42005fda99b0388","fromNode":"d21969ec1219b1b8","fromSide":"right","toNode":"435b0c461d35fcb1","toSide":"top","label":"yes"},
+		{"id":"c2dce4635c38a1a1","fromNode":"d21969ec1219b1b8","fromSide":"left","toNode":"8611d4f14716c451","toSide":"top","label":"no\n\n"},
+		{"id":"dc5fa63451413e5b","fromNode":"21dc9ab0c852b812","fromSide":"bottom","toNode":"d21969ec1219b1b8","toSide":"top"},
+		{"id":"c989cbef12aa2a2f","fromNode":"54c2714d38229173","fromSide":"bottom","toNode":"de8db9bd53a5ea68","toSide":"top"},
+		{"id":"543dbed3cc44035d","fromNode":"1cf691c6a6ccf16f","fromSide":"right","toNode":"a992d7602843eed1","toSide":"top","label":"yes"},
+		{"id":"3905e8c2cc9c3704","fromNode":"1cf691c6a6ccf16f","fromSide":"left","toNode":"fdccb2a1b045ef42","toSide":"top","label":"no"},
+		{"id":"e8c533b03eaa5c87","fromNode":"d4166c2474240053","fromSide":"right","toNode":"e4d2b2d69cb88bbb","toSide":"top"},
+		{"id":"2bfbbda142376e7b","fromNode":"d4166c2474240053","fromSide":"left","toNode":"73e8647ceec3d423","toSide":"top"}
+	]
+}

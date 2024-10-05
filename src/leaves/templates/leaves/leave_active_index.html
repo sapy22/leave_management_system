@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="col">
+    <!-- active Leave counts -->
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card border-light h-100">
+                <div class="card-body">
+                    <h5>{% translate 'Active Leave Counts' %}</h5>
+                    <hr>
+                    {{ lr_active_count }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- leave request-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="card border-light">
+                <div class="card-body">
+                    {% if leave_request %}
+                    <div class="table-responsive"></div>
+                        <table class="table table-striped table-hover table-sm ">
+                            <thead class="table-success">
+                                <tr>
+                                    <th scope="col">{% translate 'Request Id' %}</th>
+                                    <th scope="col">{% translate 'Employee' %}</th>
+                                    <th scope="col">{% translate 'Leave Type' %}</th>
+                                    <th scope="col">{% translate 'From Date' %}</th>
+                                    <th scope="col">{% translate 'To Date' %}</th>
+                                    <th scope="col">{% translate 'Days' %}</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for lr in leave_request %}
+                                <tr>
+                                    <th scope="row" nowrap>{{lr.id}}</th>
+                                    <td nowrap>{{ lr.employee }}</td>
+                                    <td nowrap>{{ lr.get_leave_type_display }}</td>
+                                    <td nowrap> {{ lr.from_date}}</td>
+                                    <td nowrap> {{ lr.to_date }}</td>
+                                    <td nowrap> {{ lr.days }}</td>
+                                </tr>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--pagination-->
+                    {% if leave_request.has_other_pages %}
+                    <div class="pagination">
+                        <span class="page-links">
+                            {% if leave_request.has_previous %}
+                            <a href="{{ request.path }}?page={{ leave_request.previous_page_number }}">{% translate 'previous' %}</a>
+                            {% endif %}
+                            <span class="page-current">
+                                {{ leave_request.number }} / {{ leave_request.paginator.num_pages }}.
+                            </span>
+                            {% if leave_request.has_next %}
+                            <a href="{{ request.path }}?page={{ leave_request.next_page_number }}">{% translate 'next' %}</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                    {% endif %}
+                    {% else %}
+                    <p>{% translate 'There is no request' %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"4e1b27f448afbb8a","type":"group","x":-940,"y":-280,"width":1360,"height":439,"label":"Manager"},
+		{"id":"7404f7802d274bba","type":"group","x":-680,"y":-620,"width":646,"height":246,"label":"Officer"},
+		{"id":"b1337341ed35d46d","type":"text","text":"New Leave Request","x":-460,"y":-236,"width":214,"height":60},
+		{"id":"e86527c898e68b82","type":"text","text":"Approved","x":-680,"y":-131,"width":166,"height":50},
+		{"id":"a88f46c46319286a","type":"text","text":"1- Leave Approval Record\n2- Leave Status","x":-880,"y":-41,"width":250,"height":60},
+		{"id":"365dce6b01da8701","type":"text","text":"Approved","x":-200,"y":-131,"width":168,"height":60},
+		{"id":"ff495e024c57ae50","type":"text","text":"1- Leave Approval Record\n2- Leave Status\n3- Leave Balance","x":100,"y":-149,"width":261,"height":108},
+		{"id":"faef25100a75a64b","type":"text","text":"1- Leave Approval Record\n2- Leave Status\n3- Leave Balance","x":-571,"y":-41,"width":250,"height":97},
+		{"id":"dfd11028701573ec","type":"text","text":"1- Leave Approval Record\n2- Leave Status","x":-246,"y":8,"width":260,"height":100},
+		{"id":"10e05b239a97fb17","type":"text","text":"Approved","x":-465,"y":-600,"width":202,"height":60},
+		{"id":"1adcf5ef30e6ca6f","type":"text","text":"1- Leave Approval Record\n2- Leave Status","x":-660,"y":-498,"width":250,"height":60},
+		{"id":"33ba38ec28dc14b1","type":"text","text":"1- Leave Approval Record\n2- Approval Stage","x":-304,"y":-498,"width":250,"height":104}
+	],
+	"edges":[
+		{"id":"948b247673824769","fromNode":"365dce6b01da8701","fromSide":"right","toNode":"ff495e024c57ae50","toSide":"left","label":"yes"},
+		{"id":"9fa2b73226ac9512","fromNode":"365dce6b01da8701","fromSide":"bottom","toNode":"dfd11028701573ec","toSide":"top","label":"no"},
+		{"id":"fc67213db623fa5a","fromNode":"b1337341ed35d46d","fromSide":"right","toNode":"365dce6b01da8701","toSide":"top","label":"yes"},
+		{"id":"8570107ba0833df4","fromNode":"b1337341ed35d46d","fromSide":"left","toNode":"e86527c898e68b82","toSide":"top","label":"no"},
+		{"id":"72055f2f2db95847","fromNode":"e86527c898e68b82","fromSide":"left","toNode":"a88f46c46319286a","toSide":"top","label":"no"},
+		{"id":"4e6bdd17f27e74e1","fromNode":"e86527c898e68b82","fromSide":"right","toNode":"faef25100a75a64b","toSide":"top","label":"yes"},
+		{"id":"8d73eb5b03126306","fromNode":"10e05b239a97fb17","fromSide":"right","toNode":"33ba38ec28dc14b1","toSide":"top","label":"yes"},
+		{"id":"066ef65c48522882","fromNode":"10e05b239a97fb17","fromSide":"left","toNode":"1adcf5ef30e6ca6f","toSide":"top","label":"no"}
+	]
+}

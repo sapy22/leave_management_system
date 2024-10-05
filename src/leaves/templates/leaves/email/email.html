@@ -1,0 +1,56 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <style>
+        table {
+            width: 100%;
+            direction: "{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}";
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #t01 th {
+            background-color: #d1e7dd;
+            color: rgb(3, 3, 3);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align:center">{% blocktranslate %}Hello your leave request {{id}} is {{status}}.{% endblocktranslate %}</h2>
+    <hr>
+    <table id='t01'>
+        <tr>
+            <th scope="col">{% translate 'Request Id' %}</th>
+            <th scope="col">{% translate 'Leave Type' %}</th>
+            <th scope="col">{% translate 'From Date' %}</th>
+            <th scope="col">{% translate 'To Date' %}</th>
+            <th scope="col">{% translate 'Days' %}</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td scope="row">{{ id }}</th>
+                <td>{{ leave_type }}</td>
+                <td> {{ from_date }}</td>
+                <td> {{ to_date }}</td>
+                <td> {{ days }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

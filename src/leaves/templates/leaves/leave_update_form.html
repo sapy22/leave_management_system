@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="col">
+    <div class="row mt-3">
+        <div class="col-sm-6">
+            <div class="card border-light">
+                <div class="card-body">
+                    {% if frm_date %}
+                        <label for="frm_date">{% translate 'From Date' %}:</label>
+                        <p id="frm_date">{{frm_date|date:"m/d/Y"}}</p>
+                    {% endif %}
+                    <form action="" method="post" id="form">
+                        {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                        </div>
+                        {% endfor %}
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <p >{{ field.label_tag }}  {{ field }}</p>
+                            {% if form.errors %}
+                                {% for error in field.errors %}
+                                <p class="alert alert-danger">
+                                    <strong>{{ error|escape }}</strong>
+                                </p>
+                                {% endfor %}
+                            {% endif %}
+                            {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        <hr>
+                        <button type="button" class="btn btn-outline-dark" onclick="getNumberOfDays()">{% translate 'Count Days' %}</button>
+                        <p id="days_value" style="display: inline;"></p>
+                        <hr>
+                        <input type="submit" name='submit_btn' class="btn btn-success" onclick="return confirm_massage(this.form)" value="{% translate 'Send' %}">
+                        <a class="btn btn-secondary" href="{% url 'leave_request_detail' lr_id %}">{% translate 'Back' %}</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //
+    function getNumberOfDays() {
+        let start;
+        let from_date = document.getElementById('id_from_date');
+        if (from_date) {
+            start = from_date.value;
+        }else {
+            start = document.getElementById('frm_date').innerHTML;
+        }
+        
+        let end = document.getElementById('id_to_date').value;
+        
+        if (start && end){
+            const start_date = new Date(start);
+            const end_date = new Date(end);
+
+            // One day in milliseconds
+            const oneDay = 1000 * 60 * 60 * 24;
+
+            // Calculating the time difference between two dates
+            const diffInTime = end_date.getTime() - start_date.getTime();
+
+            // Calculating the no. of days between two dates
+            const diffInDays = Math.round(diffInTime / oneDay);
+
+            // alert('Days = ' + (diffInDays + 1));
+            document.getElementById('days_value').innerHTML = '= ' + (diffInDays + 1);
+        }else{
+            alert('Please enter start date and end date!');
+        }
+
+    }
+
+</script>
+
+{% endblock content%}

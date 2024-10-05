@@ -1,0 +1,403 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-05 14:09+0300\n"
+"PO-Revision-Date: 2024-10-01 15:26+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: .\leaves\apps.py:8
+msgid "leaves"
+msgstr "الإجازات"
+
+#: .\leaves\forms.py:45 .\leaves\forms.py:84
+msgid "Please enter the start and end dates!"
+msgstr "يرجى إدخال تاريخ البداية والنهاية!"
+
+#: .\leaves\forms.py:48 .\leaves\forms.py:87
+msgid "The end date should be equal to or later than the start date!"
+msgstr "يجب ان يكون تاريخ النهاية اكبر من او يساوي تاريخ البداية!"
+
+#: .\leaves\forms.py:55
+msgid "Please select the leave balance number!"
+msgstr "يرجى اختيار رقم رصيد الإجازاة!"
+
+#: .\leaves\forms.py:59
+msgid "The leave type and balance type do not match!"
+msgstr "نوع الإجازة ونوع الرصيد لا يتطابقان!"
+
+#: .\leaves\forms.py:64
+msgid "The balance is not enough!"
+msgstr "الرصيد غير كافي!"
+
+#: .\leaves\forms.py:95 .\leaves\forms.py:128
+msgid "Not enough balance!"
+msgstr "الرصيد غير كافي!"
+
+#: .\leaves\forms.py:116
+msgid "Please enter the end date!"
+msgstr "يرجى إدخال تاريخ النهاية!"
+
+#: .\leaves\forms.py:120
+msgid "The end date should be equal to or later than today!"
+msgstr "يجب ان يكون تاريخ النهاية اكبر من او يساوي تاريخ اليوم!"
+
+#: .\leaves\forms.py:156
+msgid "The balance amount must be greater than zero."
+msgstr "يجب أن يكون الرصيد أكبر من صفر."
+
+#: .\leaves\models.py:9
+msgid "Annual Leave"
+msgstr "إجازة سنوية"
+
+#: .\leaves\models.py:10
+msgid "Sick Leave"
+msgstr "إجازة مرضية"
+
+#: .\leaves\models.py:11
+msgid "R1 Leave"
+msgstr "إجازة أخرى 1"
+
+#: .\leaves\models.py:12
+msgid "R2 Leave"
+msgstr "إجازة أخرى 2"
+
+#: .\leaves\models.py:16 .\leaves\models.py:38
+msgid "Officer"
+msgstr "المشرف"
+
+#: .\leaves\models.py:17
+msgid "Manager"
+msgstr "المدير"
+
+#: .\leaves\models.py:23
+msgid "Pending"
+msgstr "قيد المراجعة"
+
+#: .\leaves\models.py:24 .\leaves\models.py:111
+#: .\leaves\templates\leaves\leave_index.html:20
+msgid "Approved"
+msgstr "مقبولة"
+
+#: .\leaves\models.py:25 .\leaves\models.py:112
+#: .\leaves\templates\leaves\leave_index.html:21
+msgid "Rejected"
+msgstr "مرفوضة"
+
+#: .\leaves\models.py:26 .\leaves\templates\leaves\leave_index.html:22
+msgid "Canceled"
+msgstr "ملغية"
+
+#: .\leaves\models.py:27
+msgid "Modified"
+msgstr "معدلة"
+
+#: .\leaves\models.py:29
+msgid "Request Status"
+msgstr "حالة الطلب"
+
+#: .\leaves\models.py:30 .\leaves\templates\leaves\leave_approval_index.html:33
+msgid "Approval Stage"
+msgstr "مرحلة الاعتماد"
+
+#: .\leaves\models.py:31 .\leaves\models.py:133
+#: .\leaves\templates\leaves\email\email.html:39
+#: .\leaves\templates\leaves\leave_active_index.html:33
+#: .\leaves\templates\leaves\leave_approval_index.html:35
+#: .\leaves\templates\leaves\leave_detail.html:72
+#: .\leaves\templates\leaves\leave_index.html:89
+msgid "Leave Type"
+msgstr "نوع الإجازة"
+
+#: .\leaves\models.py:32 .\leaves\models.py:132
+#: .\leaves\templates\leaves\leave_active_index.html:32
+#: .\leaves\templates\leaves\leave_approval_index.html:34
+msgid "Employee"
+msgstr "الموظف"
+
+#: .\leaves\models.py:33
+msgid "Leave Balance Number"
+msgstr "رقم رصيد الإجازة"
+
+#: .\leaves\models.py:34 .\leaves\templates\leaves\email\email.html:40
+#: .\leaves\templates\leaves\leave_active_index.html:34
+#: .\leaves\templates\leaves\leave_approval_index.html:36
+#: .\leaves\templates\leaves\leave_detail.html:73
+#: .\leaves\templates\leaves\leave_detail.html:139
+#: .\leaves\templates\leaves\leave_index.html:90
+#: .\leaves\templates\leaves\leave_update_form.html:13
+msgid "From Date"
+msgstr "من تاريخ"
+
+#: .\leaves\models.py:35 .\leaves\templates\leaves\email\email.html:41
+#: .\leaves\templates\leaves\leave_active_index.html:35
+#: .\leaves\templates\leaves\leave_approval_index.html:37
+#: .\leaves\templates\leaves\leave_detail.html:74
+#: .\leaves\templates\leaves\leave_detail.html:140
+#: .\leaves\templates\leaves\leave_index.html:91
+msgid "To Date"
+msgstr "الى تاريخ"
+
+#: .\leaves\models.py:36 .\leaves\templates\leaves\email\email.html:42
+#: .\leaves\templates\leaves\leave_active_index.html:36
+#: .\leaves\templates\leaves\leave_approval_index.html:38
+#: .\leaves\templates\leaves\leave_detail.html:75
+#: .\leaves\templates\leaves\leave_detail.html:141
+#: .\leaves\templates\leaves\leave_index.html:53
+#: .\leaves\templates\leaves\leave_index.html:92
+msgid "Days"
+msgstr "عدد الايام"
+
+#: .\leaves\models.py:37 .\leaves\models.py:118 .\leaves\models.py:134
+#: .\leaves\templates\leaves\leave_approval_index.html:39
+#: .\leaves\templates\leaves\leave_detail.html:33
+#: .\leaves\templates\leaves\leave_detail.html:76
+msgid "Comment"
+msgstr "ملاحظات"
+
+#: .\leaves\models.py:39
+msgid "original request"
+msgstr "الطلب الاصل"
+
+#: .\leaves\models.py:40 .\leaves\models.py:119
+msgid "Created at"
+msgstr "تاريخ الإنشاء"
+
+#: .\leaves\models.py:41 .\leaves\models.py:120
+msgid "Updated at"
+msgstr "تاريخ التحديث"
+
+#: .\leaves\models.py:44
+msgid "Leave Request"
+msgstr "طلب إجازة"
+
+#: .\leaves\models.py:45
+msgid "Leave Requests"
+msgstr "طلبات الإجازة"
+
+#: .\leaves\models.py:114
+msgid "Approval status"
+msgstr "حالة الاعتماد"
+
+#: .\leaves\models.py:115
+msgid "stage"
+msgstr "مرحلة الاعتماد"
+
+#: .\leaves\models.py:116
+msgid "Leave Request Id"
+msgstr "رقم طلب الإجازة"
+
+#: .\leaves\models.py:117 .\leaves\templates\leaves\leave_detail.html:31
+msgid "Approver"
+msgstr "المعتمد"
+
+#: .\leaves\models.py:123
+msgid "Leave Approval"
+msgstr "اعتماد إجازة"
+
+#: .\leaves\models.py:124
+msgid "Leave Approvals"
+msgstr "اعتمادات الإجازة"
+
+#: .\leaves\models.py:135
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#: .\leaves\models.py:136 .\leaves\models.py:149
+msgid "Balance"
+msgstr "الرصيد"
+
+#: .\leaves\models.py:137
+msgid "Created At"
+msgstr "تاريخ الإنشاء"
+
+#: .\leaves\models.py:138
+msgid "Updated At"
+msgstr "تاريخ التحديث"
+
+#: .\leaves\models.py:141
+msgid "Leave Balance"
+msgstr "رصيد إجازة"
+
+#: .\leaves\models.py:142
+msgid "Leave Balances"
+msgstr "أرصدة الإجازة"
+
+#: .\leaves\templates\leaves\email\email.html:34
+#: .\leaves\templates\leaves\email\email.txt:3
+#, python-format
+msgid "Hello your leave request %(id)s is %(status)s."
+msgstr "حالة طلب الإجازة رقم %(id)s هو %(status)s."
+
+#: .\leaves\templates\leaves\email\email.html:38
+#: .\leaves\templates\leaves\leave_active_index.html:31
+#: .\leaves\templates\leaves\leave_approval_index.html:32
+#: .\leaves\templates\leaves\leave_detail.html:70
+#: .\leaves\templates\leaves\leave_detail.html:138
+#: .\leaves\templates\leaves\leave_index.html:87
+msgid "Request Id"
+msgstr "رقم الطلب"
+
+#: .\leaves\templates\leaves\leave_active_index.html:13
+msgid "Active Leave Counts"
+msgstr "عدد الإجازات النشطة"
+
+#: .\leaves\templates\leaves\leave_active_index.html:59
+#: .\leaves\templates\leaves\leave_approval_index.html:75
+#: .\leaves\templates\leaves\leave_index.html:125
+msgid "previous"
+msgstr "السابق"
+
+#: .\leaves\templates\leaves\leave_active_index.html:65
+#: .\leaves\templates\leaves\leave_approval_index.html:81
+#: .\leaves\templates\leaves\leave_index.html:131
+msgid "next"
+msgstr "التالي"
+
+#: .\leaves\templates\leaves\leave_active_index.html:71
+#: .\leaves\templates\leaves\leave_approval_index.html:87
+#: .\leaves\templates\leaves\leave_index.html:137
+msgid "There is no request"
+msgstr "لا يوجد طلب"
+
+#: .\leaves\templates\leaves\leave_approval_index.html:14
+msgid "Pending Request Count"
+msgstr "عدد الطلبات قيد المراجعة"
+
+#: .\leaves\templates\leaves\leave_approval_index.html:40
+#: .\leaves\templates\leaves\leave_detail.html:78
+msgid "Action"
+msgstr "الإجراء"
+
+#: .\leaves\templates\leaves\leave_approval_index.html:60
+msgid "Approve"
+msgstr "قبول"
+
+#: .\leaves\templates\leaves\leave_approval_index.html:61
+msgid "Reject"
+msgstr "رفض"
+
+#: .\leaves\templates\leaves\leave_balance_create_form.html:33
+#: .\leaves\templates\leaves\leave_create_form.html:36
+#: .\leaves\templates\leaves\leave_update_form.html:40
+msgid "Send"
+msgstr "إرسال"
+
+#: .\leaves\templates\leaves\leave_create_form.html:33
+#: .\leaves\templates\leaves\leave_update_form.html:37
+msgid "Count Days"
+msgstr "حساب الايام"
+
+#: .\leaves\templates\leaves\leave_create_form.html:37
+#: .\leaves\templates\leaves\leave_detail.html:16
+#: .\leaves\templates\leaves\leave_update_form.html:41
+msgid "Back"
+msgstr "رجوع"
+
+#: .\leaves\templates\leaves\leave_detail.html:25
+msgid "Approvals"
+msgstr "الاعتمادات"
+
+#: .\leaves\templates\leaves\leave_detail.html:30
+msgid "Stage"
+msgstr "المرحلة"
+
+#: .\leaves\templates\leaves\leave_detail.html:32
+#: .\leaves\templates\leaves\leave_detail.html:71
+#: .\leaves\templates\leaves\leave_index.html:88
+msgid "Status"
+msgstr "الحالة"
+
+#: .\leaves\templates\leaves\leave_detail.html:109
+msgid "cancel"
+msgstr "الغاء"
+
+#: .\leaves\templates\leaves\leave_detail.html:113
+msgid "update"
+msgstr "تحديث"
+
+#: .\leaves\templates\leaves\leave_detail.html:132
+msgid "Original Request"
+msgstr "الطلب الاصل"
+
+#: .\leaves\templates\leaves\leave_index.html:14
+msgid "Request Counts"
+msgstr "أعداد الطلبات"
+
+#: .\leaves\templates\leaves\leave_index.html:23
+msgid "Total"
+msgstr "الاجمالي"
+
+#: .\leaves\templates\leaves\leave_index.html:43
+msgid "Balances"
+msgstr "الأرصدة"
+
+#: .\leaves\templates\leaves\leave_index.html:50
+msgid "Balance Id"
+msgstr "رقم الرصيد"
+
+#: .\leaves\templates\leaves\leave_index.html:51
+msgid "Balance Type"
+msgstr "نوع الرصيد"
+
+#: .\leaves\templates\leaves\leave_index.html:52
+msgid "End in"
+msgstr "ينتهي في"
+
+#: .\leaves\templates\leaves\leave_index.html:70
+msgid "No balance"
+msgstr "لا يوجد رصيد"
+
+#: .\leaves\utils.py:7
+msgid "Leave Request Id "
+msgstr "رقم طلب الإجازة"
+
+#: .\leaves\views.py:62 .\leaves\views.py:66 .\leaves\views.py:277
+#: .\leaves\views.py:287 .\leaves\views.py:318 .\leaves\views.py:328
+#: .\leaves\views.py:365
+msgid "Error"
+msgstr "خطأ"
+
+#: .\leaves\views.py:149 .\leaves\views.py:182 .\leaves\views.py:219
+#: .\leaves\views.py:293 .\leaves\views.py:334 .\leaves\views.py:361
+msgid "Success"
+msgstr "نجاح"
+
+#: .\leaves\views.py:153 .\leaves\views.py:223
+msgid "Error: already exists!"
+msgstr "خطأ: موجود بالفعل!"
+
+#~ msgid "Is Ended"
+#~ msgstr "انتهى"
+
+#~ msgid "Request stage"
+#~ msgstr "مرحلة الطلب"
+
+#~ msgid "Current Balance"
+#~ msgstr "الرصيد الحالي"
+
+#~ msgid "balance"
+#~ msgstr "رصيد"
+
+#~ msgid "User"
+#~ msgstr "المستخدم"
+
+#~ msgid "Approval Status"
+#~ msgstr "حالة الاعتماد"
+
+#~ msgid "Request"
+#~ msgstr "الطلب"

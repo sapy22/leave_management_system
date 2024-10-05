@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-01 15:11+0300\n"
+"PO-Revision-Date: 2024-10-01 15:18+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: .\profiles\apps.py:7
+msgid "profiles"
+msgstr "الملفات الشخصية"
+
+#: .\profiles\forms.py:8 .\profiles\templates\profiles\profile_index.html:33
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\profiles\forms.py:14
+msgid "Code"
+msgstr "الرمز"
+
+#: .\profiles\models.py:8
+msgid "D1"
+msgstr ""
+
+#: .\profiles\models.py:9
+msgid "D2"
+msgstr ""
+
+#: .\profiles\models.py:10
+msgid "IT"
+msgstr ""
+
+#: .\profiles\models.py:12 .\profiles\templates\profiles\profile_index.html:31
+msgid "User"
+msgstr "المستخدم"
+
+#: .\profiles\models.py:13 .\profiles\templates\profiles\profile_index.html:32
+msgid "Department"
+msgstr "القسم"
+
+#: .\profiles\models.py:16
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\profiles\models.py:17
+msgid "Profiles"
+msgstr "الملفات الشخصية"
+
+#: .\profiles\templates\profiles\profile_email_change_form.html:12
+msgid "Please enter your new email address."
+msgstr "يرجى إدخال عنوان بريدك الإلكتروني الجديد."
+
+#: .\profiles\templates\profiles\profile_email_change_form.html:35
+#: .\profiles\templates\profiles\profile_email_verify_form.html:35
+#: .\profiles\templates\registration\login.html:34
+#: .\profiles\templates\registration\password_change_form.html:35
+#: .\profiles\templates\registration\password_reset_confirm.html:36
+#: .\profiles\templates\registration\password_reset_form.html:37
+msgid "Send"
+msgstr "إرسال"
+
+#: .\profiles\templates\profiles\profile_email_change_form.html:36
+#: .\profiles\templates\registration\password_change_form.html:36
+msgid "Back"
+msgstr "رجوع"
+
+#: .\profiles\templates\profiles\profile_email_verify_form.html:12
+msgid "Please enter the code sent to your newly registered email address."
+msgstr "يرجى إدخال الرمز المرسل إلى عنوان بريدك الإلكتروني الجديد."
+
+#: .\profiles\templates\profiles\profile_index.html:13
+msgid "Hi"
+msgstr "مرحبا"
+
+#: .\profiles\templates\profiles\profile_index.html:15
+msgid "Password Change"
+msgstr "تغيير كلمة المرور"
+
+#: .\profiles\templates\profiles\profile_index.html:16
+msgid "Email Change"
+msgstr "تغيير البريد الإلكتروني"
+
+#: .\profiles\templates\registration\logged_out.html:12
+msgid "You have successfully logged out."
+msgstr "لقد تم تسجيل الخروج بنجاح."
+
+#: .\profiles\templates\registration\logged_out.html:13
+#: .\profiles\templates\registration\password_reset_complete.html:13
+msgid "login"
+msgstr "تسجيل الدخول"
+
+#: .\profiles\templates\registration\login.html:37
+msgid "Reset Password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: .\profiles\templates\registration\password_change_done.html:12
+msgid "Your password has been changed successfully."
+msgstr "تم تغيير كلمة المرور بنجاح."
+
+#: .\profiles\templates\registration\password_reset_complete.html:12
+msgid "Your password has been reset successfully."
+msgstr "تم إعادة تعيين كلمة المرور بنجاح."
+
+#: .\profiles\templates\registration\password_reset_confirm.html:39
+msgid "Password reset failed"
+msgstr "فشل إعادة تعيين كلمة المرور"
+
+#: .\profiles\templates\registration\password_reset_done.html:12
+msgid ""
+"We've emailed you instructions for setting your password. If they haven't "
+"arrived in a few minutes, check your spam folder."
+msgstr ""
+"لقد أرسلنا لك تعليمات لتعيين كلمة المرور عبر البريد الإلكتروني. إذا لم تصلك "
+"خلال بضع دقائق، تحقق من مجلد الرسائل غير المرغوب فيها."
+
+#: .\profiles\templates\registration\password_reset_email.html:5
+msgid "Someone asked for password reset for email."
+msgstr "لقد طلب شخص ما إعادة تعيين كلمة المرور لبريدك الإلكتروني."
+
+#: .\profiles\templates\registration\password_reset_email.html:6
+msgid "Follow the link below:"
+msgstr "اتبع الرابط أدناه:"
+
+#: .\profiles\templates\registration\password_reset_form.html:13
+msgid "Please enter your registered email address."
+msgstr "يرجى إدخال عنوان بريدك الإلكتروني المسجل."
+
+#: .\profiles\views.py:35
+msgid "Email Reset"
+msgstr "إعادة تعيين البريد الإلكتروني"
+
+#: .\profiles\views.py:36
+msgid "This is your passcode:"
+msgstr "هذا هو رمز المرور الخاص بك:"
+
+#: .\profiles\views.py:79
+msgid "Success"
+msgstr "نجاح"
+
+#: .\profiles\views.py:81
+msgid "Error"
+msgstr "خطأ"

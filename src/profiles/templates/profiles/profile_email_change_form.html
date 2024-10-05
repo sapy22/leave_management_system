@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="col">
+    <div class="row mt-3">
+        <div class="col-lg-6">
+            <div class="card border-light">
+                <div class="card-body">
+                    <p5>{% translate 'Please enter your new email address.' %}</p5>
+                    <br><br>
+                    <form action="" method="post" id="form" onsubmit="loader()">
+                        {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                        {% endfor %}
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <p>{{ field.label_tag }} {{ field }}</p>
+                        {% if form.errors %}
+                        {% for error in field.errors %}
+                        <p class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </p>
+                        {% endfor %}
+                        {% endif %}
+                        {% if field.help_text %}
+                        <p class="help">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                        {% endfor %}
+                        <hr>
+                        <input type="submit" name='submit_btn' class="btn btn-success" value="{% translate 'Send' %}">
+                        <a class="btn btn-secondary" href="{% url 'profile_index' %}">{% translate 'Back' %}</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

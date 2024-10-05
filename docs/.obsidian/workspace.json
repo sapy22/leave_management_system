@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "201e38509401006f",
+    "type": "split",
+    "children": [
+      {
+        "id": "2457575758fa3efd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f606b3f5786c74ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Setup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b6d288928e2751ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "477c17699325f6d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "659aab231ca1d7d9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c0e8ea96e216b114",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ece93168c3491c6a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "18a2d96e22011daa",
+    "type": "split",
+    "children": [
+      {
+        "id": "10ec2338972696b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a3e0d9ad2fa4873",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Setup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3426df13d95109b7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Setup.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "58f6d0114c65e48b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "48331feae75f2880",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Setup.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "f606b3f5786c74ee",
+  "lastOpenFiles": [
+    "About.md",
+    "Customize.md",
+    "Leave Management System.md",
+    "OverView Map.canvas",
+    "Setup.md",
+    "Tasks.md",
+    "Actors/Officer - Manager/Approve-Reject.md",
+    "Actors/Officer - Manager/Approval Workflow.canvas",
+    "Actors/Officer - Manager/Approval Page.md",
+    "Actors/HR/Leave Active Page.md",
+    "Actors/Employee/Main Page.md",
+    "Actors/Employee/Leave Workflow.canvas",
+    "Actors/Employee/Leave View.md",
+    "Actors/Employee/Leave Update.md",
+    "Actors/Employee/Leave Create.md",
+    "Actors/Employee/Leave Cancel.md",
+    "Actors/Admin/Users.md",
+    "Actors/Admin/Balance Create.md",
+    "Untitled.canvas",
+    "Actors/Employee/Leave Workflow.md",
+    "Documentation/Officer - Manager/Officer Approve.md",
+    "Documentation/Officer - Manager/Officer Page.md",
+    "Actors/Admin",
+    "Actors/HR",
+    "Actors/Officer - Manager",
+    "Documentation/Employee/Update Leave Request 1.md",
+    "leave tracker page.md",
+    "hg.md",
+    "hj @{2024-08-21} 1.md",
+    "hj @{2024-08-21}.md",
+    "Documentation/Officer",
+    "Actors/Employee",
+    "2024-08-20.md",
+    "refactor",
+    "bugs",
+    "Actors"
+  ]
+}

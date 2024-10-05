@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="col">
+    <div class="row mt-3">
+        <div class="col-sm-6">
+            <div class="card border-light">
+                <div class="card-body">
+                    <form action="" method="post" id="form">
+                        {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                        </div>
+                        {% endfor %}
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <p >{{ field.label_tag }}  {{ field }}</p>
+                            {% if form.errors %}
+                                {% for error in field.errors %}
+                                <p class="alert alert-danger">
+                                    <strong>{{ error|escape }}</strong>
+                                </p>
+                                {% endfor %}
+                            {% endif %}
+                            {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        <hr>
+                        <button type="button" class="btn btn-outline-dark" onclick="getNumberOfDays()">{% translate 'Count Days' %}</button>
+                        <p id="days_value" style="display: inline;"></p>
+                        <hr>
+                        <input type="submit" name='submit_btn' class="btn btn-success" onclick="return confirm_massage(this.form)" value="{% translate 'Send' %}">
+                        <a class="btn btn-secondary" href="{% url 'leave_request_index' %}">{% translate 'Back' %}</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //
+    const leave_type = document.getElementById('id_leave_type');
+
+    function leave_type_change() {
+        const leave_balance_num = document.getElementById('id_leave_balance_num');
+        
+        if (leave_type.value == 2) {
+            leave_balance_num.parentElement.style.display = "none";
+            leave_balance_num.value = '';
+        } else {
+            leave_balance_num.parentElement.style.display = "block";
+        }
+    }
+
+    leave_type.onchange = function(){leave_type_change()};
+
+    leave_type_change();
+
+    //
+    function getNumberOfDays() {
+        let start = document.getElementById('id_from_date').value;
+        let end = document.getElementById('id_to_date').value;
+        
+        if (start && end){
+            const start_date = new Date(start);
+            const end_date = new Date(end);
+
+            // One day in milliseconds
+            const oneDay = 1000 * 60 * 60 * 24;
+
+            // Calculating the time difference between two dates
+            const diffInTime = end_date.getTime() - start_date.getTime();
+
+            // Calculating the no. of days between two dates
+            const diffInDays = Math.round(diffInTime / oneDay);
+
+            // alert('Days = ' + (diffInDays + 1));
+            document.getElementById('days_value').innerHTML = '= ' + (diffInDays + 1);
+        }else{
+            alert('Please enter start date and end date!');
+        }
+
+    }
+
+</script>
+
+{% endblock content%}

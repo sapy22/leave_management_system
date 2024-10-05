@@ -1,0 +1,168 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% if LANGUAGE_CODE == 'ar' %}
+        <link rel="stylesheet" href="{% static 'bootstrap-5.2.3/css/bootstrap.rtl.min.css' %}" />
+    {% else %}
+        <link rel="stylesheet" href="{% static 'bootstrap-5.2.3/css/bootstrap.min.css' %}" />
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>LMS</title>
+</head>
+
+<body>
+    <div class="container" style="background-color: #f9f9f9;">
+        <header>
+            <div class="row" style="background-color: #198754;">
+                <div class="col">
+                    <nav class="navbar navbar-expand-sm navbar-dark">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="{% url 'leave_request_index' %}">{% translate 'Home' %}</a>
+                                    </li>
+                                    {% if perms.leaves.Officer or perms.leaves.Manager %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'leave_approval_index' %}">{% translate 'Approval Page' %}</a>
+                                    </li>
+                                    {% endif %}
+                                    {% if perms.leaves.HR %}
+                                    <li class="nav-item"></li>
+                                        <a class="nav-link" href="{% url 'leave_active_index' %}">{% translate 'Active Leaves Page' %}</a>
+                                    </li>
+                                    {% endif %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'leave_request_create' %}">{% translate 'New Leave' %}</a>
+                                    </li>
+                                    {% if perms.leaves.Balance %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'leave_balance_create' %}">{% translate 'New Balance' %}</a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                                <ul class="navbar-nav ms-auto">
+                                    {% if user.is_authenticated %}
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{ user }}
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            
+                                            <li>
+                                                <a class="dropdown-item" href="{% url 'profile_index'%}">{% translate 'Profile Page' %}</a>
+                                            </li>
+                                            {% if user.is_staff %}
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="{% url 'admin:index'%}">{% translate 'Admin Page' %}</a>
+                                            </li>
+                                            {% endif %}
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li>
+                                                <form id="logout-form" method="post" action="{% url 'logout' %}">
+                                                    {% csrf_token %}
+                                                    <button class="dropdown-item" type="submit">{% translate 'Log out' %}</button>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    {% else %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'login'%}">{% translate 'Log in' %}</a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row">
+                <!-- messages -->
+                {% if messages %}
+                <div class="col-12">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <!-- loader -->
+                <div id="overlay" style="display: none;">
+                    <div id="loader-post">
+                        <div class="spinner-grow text-success"></div>
+                        <div class="spinner-grow text-success" role="status"></div>
+                        <div class="spinner-grow text-success" role="status"></div>
+                    </div>
+                </div>
+                <!--content-->
+                {% block content %} {% endblock %}
+            </div>
+        </main>
+    </div>
+    <div class="container text-center" style="padding: 1rem;background-color: #bdc5bd;">
+        <footer>
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <p>{% translate 'Leave Managment System' %} v.07</p>
+                </div>
+                <div class="col-2">
+                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <select class="form-select" name="language" onchange="this.form.submit()">
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                            <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>{{ language.name_local }}</option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'bootstrap-5.2.3/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script>
+        function confirm_massage(form, msg='Confirm Action?') {
+            let user_choice = window.confirm(msg);
+            if (user_choice == true) {
+                element.submit();
+                document.getElementById("overlay").style.display = "block";
+            } else {
+                return false;
+            }
+        }
+
+        function loader() {
+            document.getElementById("overlay").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

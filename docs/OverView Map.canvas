@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"f4746e29ee246727","type":"group","x":-1620,"y":-1280,"width":1720,"height":1240,"label":"Employee"},
+		{"id":"ea0e5feb20a932a8","type":"group","x":-1400,"y":220,"width":1280,"height":600,"label":"Officer - Manager"},
+		{"id":"3774f76be407a962","type":"group","x":-1400,"y":1020,"width":1280,"height":600,"label":"HR"},
+		{"id":"70c17db679353872","type":"group","x":-1400,"y":-1920,"width":1280,"height":520,"label":"Admin"},
+		{"id":"df54476b3153b7b8","type":"file","file":"Actors/Employee/Main Page.md","x":-1500,"y":-1220,"width":400,"height":400},
+		{"id":"687bbfd3035a22e8","type":"file","file":"Actors/Employee/Leave View.md","x":-1060,"y":-820,"width":400,"height":400},
+		{"id":"e4ea100808641d42","type":"file","file":"Actors/Employee/Leave Cancel.md","x":-1500,"y":-500,"width":400,"height":400},
+		{"id":"d8d5a16366c9dc6e","type":"file","file":"Actors/Employee/Leave Update.md","x":-620,"y":-500,"width":400,"height":400},
+		{"id":"67703b954a19b439","type":"file","file":"Actors/Employee/Leave Create.md","x":-420,"y":-1220,"width":400,"height":400},
+		{"id":"49084c6379841ba3","type":"file","file":"Actors/Officer - Manager/Approve-Reject.md","x":-640,"y":320,"width":400,"height":400},
+		{"id":"f33ed368a9c22fcc","type":"file","file":"Actors/Officer - Manager/Approval Page.md","x":-1260,"y":320,"width":400,"height":400},
+		{"id":"809f1995995da9c6","type":"file","file":"Actors/Admin/Users.md","x":-1260,"y":-1840,"width":400,"height":380},
+		{"id":"e4345a98b4d34040","type":"file","file":"Actors/Admin/Balance Create.md","x":-640,"y":-1860,"width":400,"height":400},
+		{"id":"5c1a746ab0069cc2","type":"file","file":"Actors/HR/Leave Active Page.md","x":-1260,"y":1120,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"3a9b751008c282d8","fromNode":"687bbfd3035a22e8","fromSide":"left","toNode":"e4ea100808641d42","toSide":"top"},
+		{"id":"9e463dcf21081e67","fromNode":"687bbfd3035a22e8","fromSide":"right","toNode":"d8d5a16366c9dc6e","toSide":"top"},
+		{"id":"5d31ca121c10274d","fromNode":"df54476b3153b7b8","fromSide":"right","toNode":"687bbfd3035a22e8","toSide":"top"},
+		{"id":"3ffaf8ef620e8da5","fromNode":"f33ed368a9c22fcc","fromSide":"right","toNode":"49084c6379841ba3","toSide":"left"}
+	]
+}
