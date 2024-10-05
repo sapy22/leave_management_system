@@ -36,7 +36,7 @@ Use [Obisden md](https://obsidian.md/) for a better reading experience.
 
 ## Pics
 <p align="center">
-<img width="400" src="./images/main_2.png">
+<img width="400" src="./images/new_balance.png">
 <img width="400" src="./images/new_leave.png">
 </p>
 <p align="center">
