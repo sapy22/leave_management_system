@@ -80,21 +80,14 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR.parent / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lms_dev',
+        'USER': 'pddb_dev',
+        'PASSWORD': 'lms_dev_pddb_dev',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'ls_dev',
-#         'USER': 'pddb',
-#         'PASSWORD': 'dppost@5d8rb',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
